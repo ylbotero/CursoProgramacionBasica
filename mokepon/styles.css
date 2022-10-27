@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+/* Importa la fuente de la letra */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #041562;
+    /* Color de todo el fondo */
+}
+
+#seleccionar-mascota {
+    /* Toma la primera seccion y la alinea */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    /* Color y tamaño de el titulo */
+    color: #fffdfd;
+    font-size: 32px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.subtitulo {
+    /* Color y tamaño de el subtitulo */
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.tarjetas,
+.tarjetas-ataques {
+    /* Alinea las tarjetas */
+    display: flex;
+    gap: 10px
+}
+
+.tarjeta-de-mokepon {
+    /*Crea las tarjetas atras de las imagenes*/
+    width: 180px;
+    height: 100px;
+    background: #11468F;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.tarjeta-de-mokepon img {
+    /* Modifica las imagenes que este dentro de esta clase */
+    width: 80px;
+}
+
+/* .tarjeta-de-mokepon,
+.boton-de-ataque:hover {
+    cursor: pointer;
+} */
+
+#boton-mascota {
+    /* boton de seleccionar */
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 30px;
+}
+
+/* #boton-mascota:hover {
+    cursor: pointer;
+} */
+
+input {
+    /* Este desaparece los check box radius */
+    display: none;
+}
+
+input:checked+label {
+    background-color: #5d8bf4;
+}
+
+#seleccionar-ataque {
+    /*centra todos los elementos de la seccion de ataque*/
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    /*Estiliza los botones de ataque*/
+    background-color: #11468F;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 80px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* .boton-de-ataque:hover {
+    color: red;
+} */
+
+#mensajes {
+    width: 280px;
+    background: #EEEEEE;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    border: none;
+    color: #041562;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color: white;
+}
+
+#vidas-jugador,
+#vidas-enemigo {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.atques-jugador,
+.atques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    /* este es para que los elementos se pongan uno debajo del otro. */
+    align-items: center;
+    /* centramos todos lo items */
+    justify-content: center;
+}
+
+#ver-mapa button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 4px;
+}
+
+/* #mapa {
+    border: 2px solid white;      Para agregar un borde al canvas, para verlo mejor 
+} */
+
+@media (max-width: 560px) {
+
+    .tarjetas,
+    .tarjetas-ataques {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px) {
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

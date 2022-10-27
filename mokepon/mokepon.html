@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MOKEPON!</title>
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section id="seleccionar-mascota">
+        <h1 class="titulo">Mokepon!</h1>
+
+        <h2 class="subtitulo">Elige tu mascota:</h2>
+
+        <div id="contenedorTarjetas" class="tarjetas">
+
+        </div>
+
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="ver-mapa">
+        <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+        <canvas id="mapa"></canvas>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">⬆️</button>
+        <div>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">⬅️</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">⬇️</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">➡️</button>
+        </div>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h1 class="titulo">Mokepon</h1>
+
+        <h2 class="subtitulo">Elige tu ataque:</h2>
+
+        <div id="contenedorAtaques" class="tarjetas-ataques">
+            <!--  <button id="boton-fuego" class="boton-de-ataque">Fuego 🔥</button>
+            <button id="boton-agua" class="boton-de-ataque">Agua 💧</button>
+            <button id="boton-tierra" class="boton-de-ataque">Tierra 🌱</button> -->
+        </div>
+
+        <div id="mensajes">
+            <p id="resultado">Mucha suerte</p>
+
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>
+        </div>
+
+        <div class="ataques">
+            <div class="atques-jugador">
+                <p id="vidas-jugador">0</p>
+                <p id="mascota-jugador"></p>
+                <div id="ataques-del-jugador"></div>
+            </div>
+            <div class="atques-enemigo">
+                <p id="vidas-enemigo">0</p>
+                <p id="mascota-enemigo"></p>
+                <div id="ataques-del-enemigo"></div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/mokepon.js"></script>
+</body>
+
+</html>
+
+<!-- <label for="lagostelvis">Lagostelvis</label>
+        <input type="radio" name="mascota" id="lagostelvis" />
+
+        <label for="tucapalma">Tucapalma</label>
+        <input type="radio" name="mascota" id="tucapalma" />
+
+        <label for="pydos">Pydos</label>
+        <input type="radio" name="mascota" id="pydos" /> -->
+
+
+<!-- Hipodoge -> Agua
+        Capipepo -> Tierra
+        Ratigueya -> Fuego
+        Lagostelvis -> Agua y Fuego
+        Tucapalma -> Agua y Tierra
+        Pydos -> Tierra y Fuego
+        -->

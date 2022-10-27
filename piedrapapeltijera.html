@@ -1,0 +1,93 @@
+<!--<!DOCTYPE html> Version HTML5. Compatibilidad con navegadores viejos. -->
+<!DOCTYPE html>
+<!--<html> Tipo de documento HTML. Funciona como un árbol, y es donde va todo el contenido de una pagina Web.-->
+<html>
+<!--<head> Primera sección donde se especificarán todos los metadatos del documento, es decir, la parte que no se ve y es donde va el código.-->
+
+<head>
+    <!--<meta> Establece un metadato específico en el documento actual. Ej:name, content, http-equiv, charset.-->
+    <!--charset="utf-8" Estandar que nos permite agregar ñ, tildes, etc.(Español).-->
+    <meta charset="utf-8" />
+    <!--<title> Título de la página (pestaña o título del navegador o en buscadores).-->
+    <title>Mi primera programada</title>
+    <!--<script> Indica un script a cargar o ejecutar en la página actual.-->
+    <script>
+        // 1 es piedra, 2 es papel, 3 es tijera.
+
+        //ALEATORIEDAD entre el min(piedra = 1) y el max(tijera = 3).
+        //return → retorna la funcion.
+        //Math.floor() → Quita los decimales a cualquier numero. La clase es Math y el punto . trae la función floor().
+        //Math.random() → Genera un numero aleatorio, con la función random() Nunca es 0 pero tampoco 1 ejem: 0.1545615.
+        //"function" Es como una variable y "aleatorio" seria su nombre.
+        function aleatorio(min, max) {//Aqui declaramos la funcion.
+            //Algoritmo para obtener un numero aleatorio entre el numero max y el min.
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        //let Declara una variable. Con comillas "0" es dato tipo texto ,sin comillas el 0 es un dato numerico.
+        //NOTA: Los datos tipo texto se pueden concatenar o juntar, son cadenas de texto. ej: 20+10=2010. Pero los datos tipo numerico sirven para hacer operaciones matematicas ej: 20+10=30. 
+        //jugador y pc son las variables.
+        //NOTA: Variable es un espacio en la memoria (representado por una palabra) a la cual se le pueden asignar un valor. 
+        //= Un solo igual es de asignacion. == doble es de comparacion.
+        let jugador = 0
+        let pc = aleatorio(1, 3)//Aqui invocamos la funcion "aleatorio" entre 1 y 3.
+
+        //prompt() Funcion. Pregunta el nombre. Nos permite obtener un texto de una forma invasiva (se parece al alert). "Popup Window".
+        //jugador = prompt("") Lo que escribamos dentro de las "" queda guardado en la variable jugador.
+        jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera")
+
+        //alert("Elegiste " + jugador)
+
+        //if()-si() Es una CONDICIONAL. Codigo que solo se ejecuta si la condicion se cumple.
+        //else()-sino() otra condicional.
+        //{} Bloque de codigo que solo se ejecuta a partir de la condicional anterior.
+        //alert("") Funsion que abre una ventana emergente "Popup Window" con una notificacion, advertencia o puede pedir informacion.
+        //Lo que elige el jugador.
+        if (jugador == 1) {
+            alert("Elegiste piedra 🪨")
+        } else if (jugador == 2) {
+            alert("Elegiste papel 🧻")
+        } else if (jugador == 3) {
+            alert("Elegiste tijera ✂️")
+        } else {
+            alert("Elegiste PERDER")
+        }
+        //Lo que elige el PC.
+        if (pc == 1) {
+            alert("PC elige piedra 🪨")
+        } else if (pc == 2) {
+            alert("PC elige papel 🧻")
+        } else if (pc == 3) {
+            alert("PC elige tijera ✂️")
+        }
+
+        //COMBATE
+        //Si el PC eligio lo mismo que el jugador alerta de "EMPATE".
+        if (pc == jugador) {
+            alert("EMPATE")
+        }
+        //En los siguientes solo se van a poner los casos en que se gana.
+        //&& - Y Operador ampersand. Es para que dos cosas se comparen al mismo tiempo.
+        //Si el jugador eligio piedra Y(&&) el pc elige tijera alerta "GANASTE".
+        else if (jugador == 1 && pc == 3) {//jugador piedra Y PC tijera  aler "GANASTE".
+            alert("GANASTE")
+        } else if (jugador == 2 && pc == 1) {//jugador papel Y PC piedra  alert "GANASTE".
+            alert("GANASTE")
+        } else if (jugador == 3 && pc == 2) {//jugador piedra Y PC tijera  alert "GANASTE".
+            alert("GANASTE")
+        }
+        //En cualquer otro caso que no se gane.
+        else {
+            alert("PERDISTE")
+        }
+    </script>
+</head>
+
+<!--<body> Esta es la segunda sección en el cuerpo de la página, donde aparecen todos los elementos que aparecerán visualmente en el navegador del usuario.-->
+
+<body>
+    <!--<h1> Encabezado de nivel 1. Equivalente al título del documento.-->
+    <h1>Piedra, papel o tijera</h1>
+</body>
+
+</html>
